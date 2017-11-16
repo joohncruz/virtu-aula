@@ -36,7 +36,7 @@
         <!-- <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
         <!-- <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
 
-        <a-entity position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+        <a-entity position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color: #baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
 
         <!-- <a-entity environment="preset: forest; numDressing: 500"></a-entity> -->
 
@@ -58,7 +58,7 @@
         </a-plane>
         
 
-        <a-plane src="#8195" height="4px" width="3px" position="-5 2.5 -8" scale="1 1 1"  rotation="0 25 0" cursor-panel="sala-de-aula">
+        <a-plane id="plane-sala" src="#8195" height="4px" width="3px" position="-5 2.5 -8" scale="1 1 1"  rotation="0 25 0" cursor-panel="sala-de-aula">
             <a-text value="Sala de Aula" color="black"  position="-1 1 0" scale="1.5 1.5 1.5"></a-text>
             <a-animation attribute="position" to="-5 2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
             <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
