@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="VirtuAula - A-Frame">
+    <title>VirtuAula - A-Frame</title>
+
+    <script src="plugins/aframe/aframe.min.js"></script>
+    <script src="plugins/aframe/aframe-text-geometry-component.min.js"></script>
+    <script src="plugins/aframe/aframe-environment-component.min.js"></script>
+    
+    <script src="main.js"></script>
+
+</head>
+
+</head>
+<body>
+
+    <a-scene>
+        <a-assets>
+            <img id="boxTexture" src="assets/mYmmbrp.jpg">
+            <img id="groundTexture" src="assets/floor.jpg">            
+            <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+            <img id="skyTexture" src="assets/sky.jpg">
+            <img id="blackboard" src="assets/blackboard.jpg">
+            <img id="door" src="assets/door.png">
+            <img id="8195" src="assets/8195.jpg">
+
+            <!-- TITTLE  -->
+            <a-asset-item id="exoFont" src="fonts/exo2Black.typeface.json"></a-asset-item>
+            <img id="chrome" src="assets/WMNH2OF.png">
+            <img id="baseColor" src="assets/1hyyIUi.png"/>
+        </a-assets>
+        
+        <!-- <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
+        <!-- <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
+
+        <a-entity position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+
+        <!-- <a-entity environment="preset: forest; numDressing: 500"></a-entity> -->
+
+        <!-- <a-sky color="#222"></a-sky> -->
+        <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+       
+        <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+        <!-- <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane> -->
+       
+        <a-light type="ambient" color="#445451"></a-light>
+        <a-light type="point" intensity="2" position="2 4 4"></a-light>
+
+
+        <a-plane src="#8195" height="4px" width="3px" position="5 2.5 -8" scale="1 1 1" rotation="0 -25 0" cursor-panel="meu-avatar">
+                <a-text value="Meu Avatar" color="black" position="-0.8 1 0" scale="1.5 1.5 1.5"></a-text>
+                <a-animation attribute="position" to="5  2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+                <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+                <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        </a-plane>
+        
+
+        <a-plane src="#8195" height="4px" width="3px" position="-5 2.5 -8" scale="1 1 1"  rotation="0 25 0" cursor-panel="sala-de-aula">
+            <a-text value="Sala de Aula" color="black"  position="-1 1 0" scale="1.5 1.5 1.5"></a-text>
+            <a-animation attribute="position" to="-5 2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        </a-plane>
+        
+
+        <a-camera>
+            <a-entity position="0 0 -3"
+                    scale="0.5 0.5 0.5"
+                    geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;"
+                    material="color: #445451; shader: flat"
+                    cursor="maxDistance: 30; fuse: true">
+                <a-animation begin="click" easing="ease-in" attribute="scale"
+                    fill="forwards" from="0.02 0.02 0.02" to="0.5 0.5 0.5" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale"
+                    fill="backwards" from="0.5 0.5 0.5" to="0.02 0.02 0.02" dur="1500"></a-animation>
+            </a-entity>
+        </a-camera>
+    
+    </a-scene>
+
+</body>
+</html>
