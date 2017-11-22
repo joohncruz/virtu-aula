@@ -22,15 +22,15 @@ AFRAME.registerComponent('cursor-panel', {
         console.log(data)  
 
         if(data == 'meu-avatar') {
-          window.location = 'avatar'
+          window.location = 'https://joohncruz.github.io/virtu-aula/avatar'
         }
         
         if(data == 'voltar') {
-          window.location = '/'
+          window.location = 'https://joohncruz.github.io/virtu-aula/'
         }
 
         if(data == 'sala-de-aula') {
-          window.location = 'sala'
+          window.location = 'https://joohncruz.github.io/virtu-aula/sala'
         }
 
         console.log('preciso mudar de tela agora kkk')  

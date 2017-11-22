@@ -27,31 +27,18 @@
             <img id="door" src="assets/door.png">
             <img id="8195" src="assets/8195.jpg">
 
-            <!-- TITTLE  -->
             <a-asset-item id="exoFont" src="fonts/exo2Black.typeface.json"></a-asset-item>
             <img id="chrome" src="assets/WMNH2OF.png">
             <img id="baseColor" src="assets/1hyyIUi.png"/>
         </a-assets>
         
-        <!-- <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
-        <!-- <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
+        <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound>
 
         <a-entity position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
 
-        <!-- <a-box src="#boxTexture" color="#66CDAA" position="0 2 -8" rotation="0 45 45" scale="1 1 1" scale-on-mouseenter="to: 1.5 1.5 1.5">
-            <a-animation attribute="position" to="0 2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
-            <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-            <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-            <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        </a-box> -->
-
-        <!-- <a-entity environment="preset: forest; numDressing: 500"></a-entity> -->
-
-        <!-- <a-sky color="#222"></a-sky> -->
         <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
        
         <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
-        <!-- <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"></a-plane> -->
        
         <a-light type="ambient" color="#445451"></a-light>
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
@@ -70,8 +57,6 @@
         
 
         <a-camera>
-            <!-- <a-cursor color="#445451"></a-cursor> -->
-
             <a-entity position="0 0 -3"
                     scale="0.5 0.5 0.5"
                     geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3;"
