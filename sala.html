@@ -56,18 +56,14 @@
         <a-light type="ambient" color="#445451"></a-light>
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
 
-
-        <a-plane src="#8195" height="4px" width="3px" position="5 2.5 -8" scale="1 1 1" rotation="0 -25 0">
-                <a-text value="Meu Avatar" color="black" position="-0.8 1 0" scale="1.5 1.5 1.5"></a-text>
-                <a-animation attribute="position" to="5  2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
-                <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
-                <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        <a-plane id="plane-sala" color="#2F4F4F" height="0.5px" width="1.5px" position="-3 1.5 -3" scale="1 1 1"  rotation="0 25 0" cursor-panel="construcao">
+            <a-text value="Em Breve!!" color="black" position="-0.5 0 0"></a-text>
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
         </a-plane>
-        
 
-        <a-plane src="#8195" height="4px" width="3px" position="-5 2.5 -8" scale="1 1 1"  rotation="0 25 0">
-            <a-text value="Sala de Aula" color="black"  position="-1 1 0" scale="1.5 1.5 1.5"></a-text>
-            <a-animation attribute="position" to="-5 2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+        <a-plane id="plane-Voltar" src="#8195" height="0.5px" width="1.5px" position="-3 0.5 -3" scale="1 1 1"  rotation="0 25 0" cursor-panel="voltar">
+            <a-text value="Voltar" color="black" position="-0.3 0 0"></a-text>
             <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
             <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
         </a-plane>

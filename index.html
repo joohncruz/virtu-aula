@@ -33,7 +33,7 @@
             <img id="baseColor" src="assets/1hyyIUi.png"/>
         </a-assets>
         
-        <!-- <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
+        <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound>
         <!-- <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
 
         <a-entity position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color: #baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
@@ -50,7 +50,7 @@
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
 
 
-        <a-plane src="#8195" height="4px" width="3px" position="5 2.5 -8" scale="1 1 1" rotation="0 -25 0" cursor-panel="meu-avatar">
+        <a-plane id="plane-avatar" src="#8195" height="4px" width="3px" position="5 2.5 -8" scale="1 1 1" rotation="0 -25 0" cursor-panel="meu-avatar">
                 <a-text value="Meu Avatar" color="black" position="-0.8 1 0" scale="1.5 1.5 1.5"></a-text>
                 <a-animation attribute="position" to="5  2.2 -8" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
                 <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
@@ -65,7 +65,6 @@
             <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
         </a-plane>
         
-
         <a-camera>
             <a-entity position="0 0 -3"
                     scale="0.5 0.5 0.5"

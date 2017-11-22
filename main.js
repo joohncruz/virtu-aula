@@ -1,4 +1,5 @@
 $ = (element) => document.querySelector(element);
+console.log(window.location)
 
 AFRAME.registerComponent('scale-on-mouseenter', {
     schema: {
@@ -19,6 +20,19 @@ AFRAME.registerComponent('cursor-panel', {
 
       this.el.addEventListener('click', function (evt) {
         console.log(data)  
+
+        if(data == 'meu-avatar') {
+          window.location = 'avatar'
+        }
+        
+        if(data == 'voltar') {
+          window.location = '/'
+        }
+
+        if(data == 'sala-de-aula') {
+          window.location = 'sala'
+        }
+
         console.log('preciso mudar de tela agora kkk')  
         console.log('I was clicked at: ', evt.detail.intersection.point);
       });
