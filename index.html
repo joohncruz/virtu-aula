@@ -9,8 +9,7 @@
     <script src="plugins/aframe/aframe.min.js"></script>
     <script src="plugins/aframe/aframe-text-geometry-component.min.js"></script>
     <script src="plugins/aframe/aframe-environment-component.min.js"></script>
-    
-    <script src="main.js"></script>
+
 
 </head>
 
@@ -19,6 +18,9 @@
 
     <a-scene>
         <a-assets>
+            <a-asset-item id="why-male-models" src="assets/man/man.dae"></a-asset-item>
+            <a-asset-item id="why-woman-models" src="assets/woman2/Sara-20110310.dae"></a-asset-item>
+
             <img id="boxTexture" src="assets/mYmmbrp.jpg">
             <img id="groundTexture" src="assets/floor.jpg">            
             <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
@@ -36,7 +38,7 @@
         <a-sound src="assets/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound>
         <!-- <a-sound src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound> -->
 
-        <a-entity position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color: #baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+        <a-entity id="menu-title" position="-3 5 -8" scale="0.6 1.2 1" text-geometry="value: VirtuAula; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color: #baseColor; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
 
         <!-- <a-entity environment="preset: forest; numDressing: 500"></a-entity> -->
 
@@ -65,6 +67,41 @@
             <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
         </a-plane>
         
+        <a-plane id="plane-Voltar" src="#8195" height="0.5px" width="1.5px" position="-3 0.5 -3" scale="1 1 1"  rotation="0 25 0" cursor-panel="voltar">
+            <a-text value="Voltar" color="black" position="-0.3 0 0"></a-text>
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        </a-plane>
+
+        <a-plane id="plane-manutencao" color="#2F4F4F" height="0.5px" width="1.5px" position="-3 1.5 -3" scale="1 1 1"  rotation="0 25 0" cursor-panel="construcao">
+            <a-text value="Em Breve!!" color="black" position="-0.5 0 0"></a-text>
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        </a-plane>
+
+
+        <a-entity id="modelM" position="0 0 -3">
+            <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
+            <a-collada-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5" src="#why-male-models"></a-collada-model>
+       </a-entity>
+
+       <a-entity id="modelF" position="0 0 -3">
+            <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
+            <a-collada-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5" src="#why-woman-models"></a-collada-model>
+       </a-entity>
+  
+        <a-plane id="plane-masculino" color="#2F4F4F" height="0.5px" width="1.5px" position="-3 2.5 -3" scale="1 1 1"  rotation="0 25 0" cursor-panel="avatar-masculino">
+            <a-text value="Masculino" color="black" position="-0.5 0 0"></a-text>
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        </a-plane>
+        
+        <a-plane id="plane-faminio" color="#2F4F4F" height="0.5px" width="1.5px" position="-3 1.5 -3" scale="1 1 1"  rotation="0 25 0" cursor-panel="avatar-feminino">
+            <a-text value="Feminino" color="black" position="-0.5 0 0"></a-text>
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="1.2 1.2 1.2"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="1 1 1"></a-animation>
+        </a-plane>
+
         <a-camera>
             <a-entity position="0 0 -3"
                     scale="0.5 0.5 0.5"
@@ -79,6 +116,10 @@
         </a-camera>
     
     </a-scene>
+
+    
+    <script src="elements.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

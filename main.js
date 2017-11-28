@@ -1,6 +1,3 @@
-$ = (element) => document.querySelector(element);
-console.log(window.location)
-
 AFRAME.registerComponent('scale-on-mouseenter', {
     schema: {
       to: {default: '2.5 2.5 2.5'}
@@ -22,19 +19,34 @@ AFRAME.registerComponent('cursor-panel', {
         console.log(data)  
 
         if(data == 'meu-avatar') {
-          window.location = 'https://joohncruz.github.io/virtu-aula/avatar'
+          transitionAvatar()
+          //window.location = 'https://joohncruz.github.io/virtu-aula/avatar'
         }
         
         if(data == 'voltar') {
-          window.location = 'https://joohncruz.github.io/virtu-aula/'
+          transitionMenu()
+          //window.location = 'https://joohncruz.github.io/virtu-aula/'
         }
 
         if(data == 'sala-de-aula') {
-          window.location = 'https://joohncruz.github.io/virtu-aula/sala'
+          transitionSala()
+          //window.location = 'https://joohncruz.github.io/virtu-aula/sala'
         }
 
+        if(data == 'avatar-feminino') {
+          alterModelFeminino()
+        }
+
+        if(data == 'avatar-masculino') {
+          alterModelMasculino()
+        }
+        
         console.log('preciso mudar de tela agora kkk')  
         console.log('I was clicked at: ', evt.detail.intersection.point);
       });
     }
 });
+
+
+
+
